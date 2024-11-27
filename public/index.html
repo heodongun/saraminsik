@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>타이머 제어 및 사람 감지</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #status {
+            width: 100px;
+            height: 100px;
+            margin: 20px auto;
+            border-radius: 50%;
+            background-color: red;
+        }
+        video, canvas {
+            display: block;
+            margin: 10px auto;
+        }
+        #timer {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+        #actionBtn {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>타이머 및 사람 감지</h1>
+    <div id="status"></div>
+    <video id="webcam" autoplay playsinline width="640" height="480"></video>
+    <canvas id="overlay" width="640" height="480"></canvas>
+    <div id="timer">17</div>
+    <button id="actionBtn">초록불 켜기</button>
+    <script src="app.js"></script>
+</body>
+</html>
